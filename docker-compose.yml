@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  webdriverio:
+    container_name: webdriverio
+    image: webdriverio
+    build:
+      context: ./
+    cap_add:
+      - SYS_ADMIN
+    working_dir: /app
+    volumes:
+      - ./:/app
+    shm_size: 128M
